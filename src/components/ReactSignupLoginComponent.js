@@ -77,6 +77,9 @@ class ReactSignupLoginComponent extends React.Component {
           !this.state.isLogin || this.state.isRecoveringPassword ? "180" : "0"
         }deg)`,
       },
+      activeButton: {
+        backgroundColor: "blue",
+      },
     };
     const showCard = () => {
       if (this.state.isLogin && !this.state.isRecoveringPassword) {

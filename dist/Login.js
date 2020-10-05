@@ -110,7 +110,7 @@ var Login = function Login(_ref) {
           name: "submit-login",
           value: submitLoginCustomLabel,
           type: "submit",
-          style: Object.assign({}, localStyles.button, styles.button),
+          style: Object.assign({}, localStyles.button, styles.activeButton),
           onClick: handleLogin
         })
       ),

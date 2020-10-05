@@ -98,7 +98,7 @@ const Signup = ({
         id="submit-signup"
         type="submit"
         value={submitSignupCustomLabel}
-        style={Object.assign({}, localStyles.button, styles.button)}
+        style={Object.assign({}, localStyles.button, styles.activeButton)}
         onClick={handleSignup}
       />
       <button

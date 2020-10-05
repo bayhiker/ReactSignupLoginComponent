@@ -76,7 +76,7 @@ var RecoverPassword = function RecoverPassword(_ref) {
         name: "submit-recover-password",
         type: "submit",
         value: submitRecoverPasswordCustomLabel,
-        style: Object.assign({}, localStyles.button, styles.button),
+        style: Object.assign({}, localStyles.button, styles.activeButton),
         onClick: handleRecoverPassword
       }),
       React.createElement(

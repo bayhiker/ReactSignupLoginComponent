@@ -73,7 +73,7 @@ const RecoverPassword = ({
         name="submit-recover-password"
         type="submit"
         value={submitRecoverPasswordCustomLabel}
-        style={Object.assign({}, localStyles.button, styles.button)}
+        style={Object.assign({}, localStyles.button, styles.activeButton)}
         onClick={handleRecoverPassword}
       />
       <button

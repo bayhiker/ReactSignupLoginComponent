@@ -98,6 +98,9 @@ var ReactSignupLoginComponent = function (_React$Component) {
           transformStyle: "preserve-3d",
           position: "relative",
           transform: "rotateY(" + (!this.state.isLogin || this.state.isRecoveringPassword ? "180" : "0") + "deg)"
+        },
+        activeButton: {
+          backgroundColor: "blue"
         }
       };
       var showCard = function showCard() {
