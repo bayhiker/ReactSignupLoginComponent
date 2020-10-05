@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
-import Login from './Login';
-import Signup from './Signup';
-import RecoverPassword from './RecoverPassword';
+import Login from "./Login";
+import Signup from "./Signup";
+import RecoverPassword from "./RecoverPassword";
 
 // Our only css dependency
-import './normalize.css';
+import "./normalize.css";
 
 class ReactSignupLoginComponent extends React.Component {
   constructor(props) {
@@ -19,9 +19,9 @@ class ReactSignupLoginComponent extends React.Component {
     this.state = {
       isLogin: this.props.isLogin,
       isRecoveringPassword: this.props.isRecoveringPassword,
-      username: '',
-      password: '',
-      passwordConfirmation: '',
+      username: "",
+      password: "",
+      passwordConfirmation: "",
     };
   }
 
@@ -53,29 +53,29 @@ class ReactSignupLoginComponent extends React.Component {
   render() {
     const styles = {
       wrapper: {
-        border: '1px solid #eee',
+        border: "1px solid #eee",
         borderRadius: 3,
-        backgroundColor: '#FAFAFA',
+        backgroundColor: "#FAFAFA",
         margin: 10,
         padding: 20,
-        maxWidth: '500px',
+        maxWidth: "500px",
 
         width: 500,
         height: 400,
         perspective: 1000,
       },
       title: {
-        textAlign: 'center',
+        textAlign: "center",
         height: 40,
-        lineHeight: '40px',
+        lineHeight: "40px",
       },
       flipper: {
-        transition: '0.4s',
-        transformStyle: 'preserve-3d',
-        position: 'relative',
-        transform: `rotateY(${!this.state.isLogin || this.state.isRecoveringPassword
-          ? '180'
-          : '0'}deg)`,
+        transition: "0.4s",
+        transformStyle: "preserve-3d",
+        position: "relative",
+        transform: `rotateY(${
+          !this.state.isLogin || this.state.isRecoveringPassword ? "180" : "0"
+        }deg)`,
       },
     };
     const showCard = () => {
@@ -110,7 +110,9 @@ class ReactSignupLoginComponent extends React.Component {
             passwordConfirmation={this.state.passwordConfirmation}
             usernameCustomLabel={this.props.usernameCustomLabel}
             passwordCustomLabel={this.props.passwordCustomLabel}
-            passwordConfirmationCustomLabel={this.props.passwordConfirmationCustomLabel}
+            passwordConfirmationCustomLabel={
+              this.props.passwordConfirmationCustomLabel
+            }
             goToLoginCustomLabel={this.props.goToLoginCustomLabel}
             submitSignupCustomLabel={this.props.submitSignupCustomLabel}
           />
@@ -125,7 +127,9 @@ class ReactSignupLoginComponent extends React.Component {
           username={this.state.username}
           usernameCustomLabel={this.props.usernameCustomLabel}
           goToLoginCustomLabel={this.props.goToLoginCustomLabel}
-          submitRecoverPasswordCustomLabel={this.props.submitRecoverPasswordCustomLabel}
+          submitRecoverPasswordCustomLabel={
+            this.props.submitRecoverPasswordCustomLabel
+          }
         />
       );
     };
@@ -134,8 +138,12 @@ class ReactSignupLoginComponent extends React.Component {
         id="main-wrapper"
         style={Object.assign(styles.wrapper, this.props.styles.mainWrapper)}
       >
-        <h1 style={Object.assign(styles.title, this.props.styles.mainTitle)}>{this.props.title}</h1>
-        <div style={Object.assign(styles.flipper, this.props.styles.flipper)}>{showCard()}</div>
+        <h1 style={Object.assign(styles.title, this.props.styles.mainTitle)}>
+          {this.props.title}
+        </h1>
+        <div style={Object.assign(styles.flipper, this.props.styles.flipper)}>
+          {showCard()}
+        </div>
       </section>
     );
   }
@@ -189,19 +197,19 @@ ReactSignupLoginComponent.propTypes = {
 };
 
 ReactSignupLoginComponent.defaultProps = {
-  title: 'Company Name',
+  title: "Company Name",
   isLogin: true,
   isRecoveringPassword: false,
   styles: {},
-  usernameCustomLabel: 'Username',
-  passwordCustomLabel: 'Password',
-  passwordConfirmationCustomLabel: 'Confirm password',
-  recoverPasswordCustomLabel: 'Recover Password',
-  goToSignupCustomLabel: 'Signup',
-  goToLoginCustomLabel: 'Login',
-  submitLoginCustomLabel: 'Signup',
-  submitSignupCustomLabel: 'Signup',
-  submitRecoverPasswordCustomLabel: 'Recover',
+  usernameCustomLabel: "Username",
+  passwordCustomLabel: "Password",
+  passwordConfirmationCustomLabel: "Confirm password",
+  recoverPasswordCustomLabel: "Recover Password",
+  goToSignupCustomLabel: "Signup",
+  goToLoginCustomLabel: "Login",
+  submitLoginCustomLabel: "Signup",
+  submitSignupCustomLabel: "Signup",
+  submitRecoverPasswordCustomLabel: "Recover",
 };
 
 export default ReactSignupLoginComponent;

@@ -8,15 +8,15 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
-import Login from './Login';
-import Signup from './Signup';
-import RecoverPassword from './RecoverPassword';
+import Login from "./Login";
+import Signup from "./Signup";
+import RecoverPassword from "./RecoverPassword";
 
 // Our only css dependency
-import './normalize.css';
+import "./normalize.css";
 
 var ReactSignupLoginComponent = function (_React$Component) {
   _inherits(ReactSignupLoginComponent, _React$Component);
@@ -34,20 +34,20 @@ var ReactSignupLoginComponent = function (_React$Component) {
     _this.state = {
       isLogin: _this.props.isLogin,
       isRecoveringPassword: _this.props.isRecoveringPassword,
-      username: '',
-      password: '',
-      passwordConfirmation: ''
+      username: "",
+      password: "",
+      passwordConfirmation: ""
     };
     return _this;
   }
 
   _createClass(ReactSignupLoginComponent, [{
-    key: 'updateState',
+    key: "updateState",
     value: function updateState(key, value) {
       this.setState(_defineProperty({}, key, value));
     }
   }, {
-    key: 'bubleUpSignup',
+    key: "bubleUpSignup",
     value: function bubleUpSignup() {
       this.props.handleSignup({
         username: this.state.username,
@@ -56,7 +56,7 @@ var ReactSignupLoginComponent = function (_React$Component) {
       });
     }
   }, {
-    key: 'bubleUpLogin',
+    key: "bubleUpLogin",
     value: function bubleUpLogin() {
       this.props.handleLogin({
         username: this.state.username,
@@ -64,46 +64,46 @@ var ReactSignupLoginComponent = function (_React$Component) {
       });
     }
   }, {
-    key: 'bubleUpRecoverPassword',
+    key: "bubleUpRecoverPassword",
     value: function bubleUpRecoverPassword() {
       this.props.handleRecoverPassword({
         username: this.state.username
       });
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       var _this2 = this;
 
       var styles = {
         wrapper: {
-          border: '1px solid #eee',
+          border: "1px solid #eee",
           borderRadius: 3,
-          backgroundColor: '#FAFAFA',
+          backgroundColor: "#FAFAFA",
           margin: 10,
           padding: 20,
-          maxWidth: '500px',
+          maxWidth: "500px",
 
           width: 500,
           height: 400,
           perspective: 1000
         },
         title: {
-          textAlign: 'center',
+          textAlign: "center",
           height: 40,
-          lineHeight: '40px'
+          lineHeight: "40px"
         },
         flipper: {
-          transition: '0.4s',
-          transformStyle: 'preserve-3d',
-          position: 'relative',
-          transform: 'rotateY(' + (!this.state.isLogin || this.state.isRecoveringPassword ? '180' : '0') + 'deg)'
+          transition: "0.4s",
+          transformStyle: "preserve-3d",
+          position: "relative",
+          transform: "rotateY(" + (!this.state.isLogin || this.state.isRecoveringPassword ? "180" : "0") + "deg)"
         }
       };
       var showCard = function showCard() {
         if (_this2.state.isLogin && !_this2.state.isRecoveringPassword) {
           return React.createElement(Login, {
-            key: 'login-form',
+            key: "login-form",
             handleShowSignup: _this2.updateState,
             handleShowRecover: _this2.updateState,
             styles: _this2.props.styles.login,
@@ -119,7 +119,7 @@ var ReactSignupLoginComponent = function (_React$Component) {
           });
         } else if (!_this2.state.isLogin && !_this2.state.isRecoveringPassword) {
           return React.createElement(Signup, {
-            key: 'signup-form',
+            key: "signup-form",
             handleShowLogin: _this2.updateState,
             styles: _this2.props.styles.signup,
             handleSignup: _this2.bubleUpSignup,
@@ -146,18 +146,18 @@ var ReactSignupLoginComponent = function (_React$Component) {
         });
       };
       return React.createElement(
-        'section',
+        "section",
         {
-          id: 'main-wrapper',
+          id: "main-wrapper",
           style: Object.assign(styles.wrapper, this.props.styles.mainWrapper)
         },
         React.createElement(
-          'h1',
+          "h1",
           { style: Object.assign(styles.title, this.props.styles.mainTitle) },
           this.props.title
         ),
         React.createElement(
-          'div',
+          "div",
           { style: Object.assign(styles.flipper, this.props.styles.flipper) },
           showCard()
         )
@@ -216,19 +216,19 @@ ReactSignupLoginComponent.propTypes = {
 };
 
 ReactSignupLoginComponent.defaultProps = {
-  title: 'Company Name',
+  title: "Company Name",
   isLogin: true,
   isRecoveringPassword: false,
   styles: {},
-  usernameCustomLabel: 'Username',
-  passwordCustomLabel: 'Password',
-  passwordConfirmationCustomLabel: 'Confirm password',
-  recoverPasswordCustomLabel: 'Recover Password',
-  goToSignupCustomLabel: 'Signup',
-  goToLoginCustomLabel: 'Login',
-  submitLoginCustomLabel: 'Signup',
-  submitSignupCustomLabel: 'Signup',
-  submitRecoverPasswordCustomLabel: 'Recover'
+  usernameCustomLabel: "Username",
+  passwordCustomLabel: "Password",
+  passwordConfirmationCustomLabel: "Confirm password",
+  recoverPasswordCustomLabel: "Recover Password",
+  goToSignupCustomLabel: "Signup",
+  goToLoginCustomLabel: "Login",
+  submitLoginCustomLabel: "Signup",
+  submitSignupCustomLabel: "Signup",
+  submitRecoverPasswordCustomLabel: "Recover"
 };
 
 export default ReactSignupLoginComponent;

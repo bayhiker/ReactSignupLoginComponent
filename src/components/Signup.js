@@ -1,38 +1,38 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
 const localStyles = {
   wrapper: {
-    backfaceVisibility: 'hidden',
-    position: 'absolute',
+    backfaceVisibility: "hidden",
+    position: "absolute",
     top: 0,
     left: 0,
-    transform: 'rotateY(180deg)',
-    width: '100%',
+    transform: "rotateY(180deg)",
+    width: "100%",
   },
   inputWrapper: {
-    display: 'flex',
-    flexFlow: 'row wrap',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    flexFlow: "row wrap",
+    justifyContent: "center",
+    alignItems: "center",
   },
   buttonsWrapper: {
-    display: 'flex',
-    flexFlow: 'row wrap',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    flexFlow: "row wrap",
+    justifyContent: "center",
+    alignItems: "center",
   },
   input: {
     width: 344,
     height: 40,
-    margin: '15px 0',
+    margin: "15px 0",
   },
   recoverPassword: {
-    width: '100%',
-    textAlign: 'center',
+    width: "100%",
+    textAlign: "center",
   },
   button: {
-    margin: '0 15px',
+    margin: "0 15px",
     padding: 15,
   },
 };
@@ -51,15 +51,21 @@ const Signup = ({
   goToLoginCustomLabel,
   submitSignupCustomLabel,
 }) => (
-  <section id="signup-form" style={Object.assign({}, localStyles.wrapper, styles.wrapper)}>
-    <div id="fields" style={Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)}>
+  <section
+    id="signup-form"
+    style={Object.assign({}, localStyles.wrapper, styles.wrapper)}
+  >
+    <div
+      id="fields"
+      style={Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)}
+    >
       <input
         style={Object.assign({}, localStyles.input, styles.input)}
         type="text"
         id="username"
         name="username"
         placeholder={usernameCustomLabel}
-        onChange={e => handleChange(e.target.name, e.target.value)}
+        onChange={(e) => handleChange(e.target.name, e.target.value)}
         value={username}
       />
       <input
@@ -68,7 +74,7 @@ const Signup = ({
         id="password"
         name="password"
         placeholder={passwordCustomLabel}
-        onChange={e => handleChange(e.target.name, e.target.value)}
+        onChange={(e) => handleChange(e.target.name, e.target.value)}
         value={password}
       />
       <input
@@ -77,21 +83,17 @@ const Signup = ({
         id="passwordConfirmation"
         name="passwordConfirmation"
         placeholder={passwordConfirmationCustomLabel}
-        onChange={e => handleChange(e.target.name, e.target.value)}
+        onChange={(e) => handleChange(e.target.name, e.target.value)}
         value={passwordConfirmation}
       />
     </div>
-    <div style={Object.assign({}, localStyles.buttonsWrapper, styles.buttonsWrapper)}>
-      <button
-        id="login-button"
-        type="button"
-        style={Object.assign({}, localStyles.button, styles.button)}
-        onClick={() => {
-          handleShowLogin('isLogin', true);
-        }}
-      >
-        {goToLoginCustomLabel}
-      </button>
+    <div
+      style={Object.assign(
+        {},
+        localStyles.buttonsWrapper,
+        styles.buttonsWrapper
+      )}
+    >
       <input
         id="submit-signup"
         type="submit"
@@ -99,6 +101,16 @@ const Signup = ({
         style={Object.assign({}, localStyles.button, styles.button)}
         onClick={handleSignup}
       />
+      <button
+        id="login-button"
+        type="button"
+        style={Object.assign({}, localStyles.button, styles.button)}
+        onClick={() => {
+          handleShowLogin("isLogin", true);
+        }}
+      >
+        {goToLoginCustomLabel}
+      </button>
     </div>
   </section>
 );

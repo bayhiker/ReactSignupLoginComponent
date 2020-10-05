@@ -1,34 +1,34 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
 var localStyles = {
   wrapper: {
-    backfaceVisibility: 'hidden',
-    position: 'absolute',
+    backfaceVisibility: "hidden",
+    position: "absolute",
     top: 0,
     left: 0,
-    transform: 'rotateY(180deg)',
-    width: '100%'
+    transform: "rotateY(180deg)",
+    width: "100%"
   },
   inputWrapper: {
-    display: 'flex',
-    flexFlow: 'row wrap',
-    justifyContent: 'center',
-    alignItems: 'center'
+    display: "flex",
+    flexFlow: "row wrap",
+    justifyContent: "center",
+    alignItems: "center"
   },
   buttonsWrapper: {
-    display: 'flex',
-    flexFlow: 'row wrap',
-    justifyContent: 'center',
-    alignItems: 'center'
+    display: "flex",
+    flexFlow: "row wrap",
+    justifyContent: "center",
+    alignItems: "center"
   },
   input: {
     width: 344,
     height: 40,
-    margin: '15px 0'
+    margin: "15px 0"
   },
   button: {
-    margin: '0 15px',
+    margin: "0 15px",
     padding: 15
   }
 };
@@ -43,19 +43,22 @@ var RecoverPassword = function RecoverPassword(_ref) {
       goToLoginCustomLabel = _ref.goToLoginCustomLabel,
       submitRecoverPasswordCustomLabel = _ref.submitRecoverPasswordCustomLabel;
   return React.createElement(
-    'section',
+    "section",
     {
-      id: 'recover-password-form',
+      id: "recover-password-form",
       style: Object.assign({}, localStyles.wrapper, styles.wrapper)
     },
     React.createElement(
-      'div',
-      { id: 'fields', style: Object.assign({}, localStyles.inputWrapper, styles.inputWrapper) },
-      React.createElement('input', {
+      "div",
+      {
+        id: "fields",
+        style: Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)
+      },
+      React.createElement("input", {
         style: Object.assign({}, localStyles.input, styles.input),
-        type: 'text',
-        id: 'username',
-        name: 'username',
+        type: "text",
+        id: "username",
+        name: "username",
         placeholder: usernameCustomLabel,
         onChange: function onChange(e) {
           return handleChange(e.target.name, e.target.value);
@@ -64,28 +67,30 @@ var RecoverPassword = function RecoverPassword(_ref) {
       })
     ),
     React.createElement(
-      'div',
-      { style: Object.assign({}, localStyles.buttonsWrapper, styles.buttonsWrapper) },
-      React.createElement(
-        'button',
-        {
-          id: 'login-button',
-          type: 'button',
-          style: Object.assign({}, localStyles.button, styles.button),
-          onClick: function onClick() {
-            handleShowLogin('isRecoveringPassword', false);
-          }
-        },
-        goToLoginCustomLabel
-      ),
-      React.createElement('input', {
-        id: 'submit-recover-password',
-        name: 'submit-recover-password',
-        type: 'submit',
+      "div",
+      {
+        style: Object.assign({}, localStyles.buttonsWrapper, styles.buttonsWrapper)
+      },
+      React.createElement("input", {
+        id: "submit-recover-password",
+        name: "submit-recover-password",
+        type: "submit",
         value: submitRecoverPasswordCustomLabel,
         style: Object.assign({}, localStyles.button, styles.button),
         onClick: handleRecoverPassword
-      })
+      }),
+      React.createElement(
+        "button",
+        {
+          id: "login-button",
+          type: "button",
+          style: Object.assign({}, localStyles.button, styles.button),
+          onClick: function onClick() {
+            handleShowLogin("isRecoveringPassword", false);
+          }
+        },
+        goToLoginCustomLabel
+      )
     )
   );
 };
