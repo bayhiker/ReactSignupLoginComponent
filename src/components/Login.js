@@ -70,6 +70,7 @@ const Login = ({
       style={Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)}
     >
       <input
+        tabIndex="0"
         style={Object.assign({}, localStyles.input, styles.input)}
         type="text"
         id="username"
@@ -79,6 +80,7 @@ const Login = ({
         value={username}
       />
       <input
+        tabIndex="0"
         style={Object.assign({}, localStyles.input, styles.input)}
         type="password"
         id="password"
@@ -103,6 +105,7 @@ const Login = ({
         )}
       >
         <input
+          tabIndex="0"
           id="submit-login"
           name="submit-login"
           value={submitLoginCustomLabel}
@@ -112,6 +115,7 @@ const Login = ({
         />
       </div>
       <button
+        tabIndex="0"
         id="signup-button"
         type="button"
         style={Object.assign({}, localStyles.button, styles.button)}
@@ -122,6 +126,7 @@ const Login = ({
         {goToSignupCustomLabel}
       </button>
       <button
+        tabIndex="0"
         id="recorver-password"
         type="button"
         style={Object.assign(

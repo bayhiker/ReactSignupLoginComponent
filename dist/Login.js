@@ -73,6 +73,7 @@ var Login = function Login(_ref) {
         style: Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)
       },
       React.createElement("input", {
+        tabIndex: "0",
         style: Object.assign({}, localStyles.input, styles.input),
         type: "text",
         id: "username",
@@ -84,6 +85,7 @@ var Login = function Login(_ref) {
         value: username
       }),
       React.createElement("input", {
+        tabIndex: "0",
         style: Object.assign({}, localStyles.input, styles.input),
         type: "password",
         id: "password",
@@ -106,6 +108,7 @@ var Login = function Login(_ref) {
           style: Object.assign({}, localStyles.recoverPasswordWrapper, styles.recoverPasswordWrapper)
         },
         React.createElement("input", {
+          tabIndex: "0",
           id: "submit-login",
           name: "submit-login",
           value: submitLoginCustomLabel,
@@ -117,6 +120,7 @@ var Login = function Login(_ref) {
       React.createElement(
         "button",
         {
+          tabIndex: "0",
           id: "signup-button",
           type: "button",
           style: Object.assign({}, localStyles.button, styles.button),
@@ -129,6 +133,7 @@ var Login = function Login(_ref) {
       React.createElement(
         "button",
         {
+          tabIndex: "0",
           id: "recorver-password",
           type: "button",
           style: Object.assign({}, localStyles.recoverPassword, styles.recoverPasswordButton),
